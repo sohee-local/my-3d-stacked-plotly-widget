@@ -8,7 +8,7 @@
   "webcomponents": [
     {
       "kind": "main",
-      "url": "main.js",  
+      "url": "https://github.com/sohee-local/my-3d-stacked-plotly-widget/main.js",  
       "tag": "sohee-3dstackedchart",
       "integrity": "",
       "ignoreIntegrity": true
