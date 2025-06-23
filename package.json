@@ -1,0 +1,22 @@
+{
+  "name": "my-3d-stacked-plotly-widget",
+  "version": "1.0.0",
+  "description": "SAC Custom Widget for 3D Stacked Bar Chart with Plotly.js",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "sac-cli build",
+    "deploy": "sac-cli deploy",
+    "serve": "sac-cli serve"
+  },
+  "keywords": [
+    "SAC",
+    "Custom Widget",
+    "Plotly",
+    "3D Bar Chart"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@sap/sac-custom-widget-cli": "latest"
+  }
+}

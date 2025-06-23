@@ -1,0 +1,67 @@
+{
+  "id": "sohee.3d.stacked.barchart",
+  "version": "1.0.0",
+  "name": "3D Stacked Bar Chart",
+  "description": "A custom 3D stacked bar chart visualization using Plotly.js.",
+  "icon": "https://sohee-local.github.io/SAC/%EC%A6%9D%EB%AA%85.jpg",
+  "newInstancePrefix": "sohee3DStack",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "url": "main.js",  
+      "tag": "sohee-3dstackedchart",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Chart Title",
+      "default": "My 3D Stacked Chart"
+    },
+    "colorPalette": {
+      "type": "string",
+      "description": "Color Scheme (comma separated HEX codes)",
+      "default": "#a84300,#f5c6a5,#007bff,#28a745,#dc3545,#ffc107,#6c757d,#17a2b8,#fd7e14,#e83e8c"
+    },
+    "barWidth": {
+      "type": "number",
+      "description": "Width of bars (0-1, for 2D visual)",
+      "default": 0.8
+    },
+    "barDepth": {
+      "type": "number",
+      "description": "Depth of bars (for 3D visual, not directly used by Plotly 2D bar)",
+      "default": 0.5
+    }
+  },
+  "events": {
+    "onBarClick": {
+      "description": "Fires when a bar is clicked"
+    }
+  },
+  "methods": {
+    "refreshChart": {
+      "description": "Refreshes the chart data.",
+      "parameters": [],
+      "returnType": "void"
+    }
+  },
+  "dataBindings": {
+    "dataBinding": {
+      "feeds": [
+        {
+          "id": "dimensions",
+          "description": "Dimensions (e.g., DATE)",
+          "type": "dimension"
+        },
+        {
+          "id": "measures",
+          "description": "Measures (e.g., SDD Qty, ITG Qty)",
+          "type": "mainStructureMember"
+        }
+      ]
+    }
+  }
+}
