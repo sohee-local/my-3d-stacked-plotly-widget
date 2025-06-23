@@ -26,7 +26,6 @@
     }
 
     connectedCallback() {
-      // Plotly 라이브러리가 전역적으로 사용 가능한지 확인합니다.
       if (typeof Plotly === 'undefined') {
         console.error("Plotly.js 라이브러리가 로드되지 않았습니다. 빌드 과정에서 포함되었는지 확인하십시오.");
         this._chartContainer.innerHTML = '<div style="color: red; text-align: center; padding: 20px;">차트 라이브러리 로드 실패. 관리자에게 문의하세요.</div>';
@@ -58,7 +57,7 @@
                            ['#a84300', '#f5c6a5', '#007bff', '#28a745', '#dc3545', '#ffc107', '#6c757d', '#17a2b8', '#fd7e14', '#e83e8c'];
       
       const barWidthRatio = properties.barWidth || 0.8; 
-      const barDepthValue = properties.barDepth || 0.5; 
+      const barDepthValue = properties.barDepth || 0.5;
 
       const dataBinding = this.dataBindings.dataBinding;
 
